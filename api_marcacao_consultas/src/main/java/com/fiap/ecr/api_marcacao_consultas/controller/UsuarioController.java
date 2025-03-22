@@ -1,4 +1,4 @@
-package main.java.com.fiap.ecr.api_marcacao_consultas.controller;
+package com.fiap.ecr.api_marcacao_consultas.controller;
 
 import com.fiap.ecr.api_marcacao_consultas.model.Usuario;
 import com.fiap.ecr.api_marcacao_consultas.service.UsuarioService;

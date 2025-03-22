@@ -1,4 +1,4 @@
-package main.java.com.fiap.ecr.api_marcacao_consultas.config;
+package com.fiap.ecr.api_marcacao_consultas.config;
 
 import com.fiap.ecr.api_marcacao_consultas.security.JwtAuthenticationFilter;
 import com.fiap.ecr.api_marcacao_consultas.security.JwtTokenProvider;
