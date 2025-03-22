@@ -1,10 +1,8 @@
 package com.fiap.ecr.api_marcacao_consultas.security;
 
 import io.jsonwebtoken.*;
-import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import java.security.Key;
 import java.util.Date;
@@ -16,6 +14,7 @@ public class JwtTokenProvider {
     @Value("${jwt.expiration}")
     private long tempoExpiracao;
 
+    @SuppressWarnings("deprecation")
     public JwtTokenProvider(@Value("${jwt.secret}") String segredo) {
         // Gerar uma chave segura em vez de usar a chave fornecida
         // Isso garantirá que temos uma chave com comprimento suficiente
@@ -23,6 +22,7 @@ public class JwtTokenProvider {
     }
 
     // Gerar token JWT
+    @SuppressWarnings("deprecation")
     public String gerarToken(String email) {
         Date agora = new Date();
         Date expiracao = new Date(agora.getTime() + tempoExpiracao);
